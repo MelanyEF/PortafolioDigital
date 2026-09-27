@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital | Experiencia</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<header id="barra-navegación">
+    <div class="logo">
+        <a href="Index.html">Mis redes<span> | Melany Espinoza Freitas</span></a>
+    </div>
+
+    <nav class="menu">
+        <a href="Index.html" class="btn-menu">Inicio</a>
+        <a href="Galeria.html" class="btn-menu">Galería</a>
+        <a href="Experiencia.html" class="btn-menu activo">Experiencia</a>
+        <a href="Contacto.html" class="btn-menu">Contacto</a>
+    </nav>
+</header>
+
+
+<main class="hero-principal">
+    <div class="hero-contenido sin-animacion">
+        <span class="etiqueta-sub">Mi trayectoria</span>
+
+        <h1>
+            Experiencia
+            <span class="destacado">& proyectos.</span>
+        </h1>
+
+        <p>
+            Una selección de proyectos, colaboraciones y experiencias
+            que han formado mi camino en el diseño y la fotografía.
+        </p>
+    </div>
+</main>
+
+<section class="seccion-experiencia">
+
+    <div class="contenedor-experiencia">
+
+
+        <!-- EXPERIENCIA 01 (MÁS RECIENTE) -->
+
+        <article class="tarjeta-experiencia">
+
+            <div class="numero-experiencia">
+                01
+            </div>
+
+            <div class="contenido-experiencia">
+
+                <span class="etiqueta-sub">
+                    Agosto 2026 — Actualidad
+                </span>
+
+                <h2>
+                    Servicio social
+                    <span class="destacado"> | Rectoría</span>
+                </h2>
+
+                <p>
+                    Participación en proyectos de comunicación visual,
+                    apoyando en la creación de contenido para redes sociales,
+                    diseño gráfico y fotografía.
+                </p>
+
+                <div class="etiquetas-experiencia">
+                    <span>Diseño gráfico</span>
+                    <span>Fotografía</span>
+                    <span>Redes sociales</span>
+                    <span>Branding</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- EXPERIENCIA 02 -->
+
+        <article class="tarjeta-experiencia">
+
+            <div class="numero-experiencia">
+                02
+            </div>
+
+            <div class="contenido-experiencia">
+
+                <span class="etiqueta-sub">
+                    JUNIO 2026 | PROYECTO FOTOGRÁFICO
+                </span>
+
+                <h2>
+                    Palomina Café
+                </h2>
+
+                <p>
+                    Creación de fotografías del establecimiento y sus
+                    productos. El material fue seleccionado para formar
+                    parte del contenido publicado en sus redes sociales.
+                </p>
+
+                <div class="etiquetas-experiencia">
+                    <span>Fotografía</span>
+                    <span>Fotografía de producto</span>
+                    <span>Contenido digital</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- EXPERIENCIA 03 -->
+
+        <article class="tarjeta-experiencia">
+
+            <div class="numero-experiencia">
+                03
+            </div>
+
+            <div class="contenido-experiencia">
+
+                <span class="etiqueta-sub">
+                    Abril 2026 | PROYECTO FOTOGRÁFICO
+                </span>
+
+                <h2>
+                    El Chapucero
+                </h2>
+
+                <p>
+                    Realización de fotografías para contenido digital.
+                    Algunas de las imágenes fueron seleccionadas y
+                    utilizadas en las redes sociales del establecimiento.
+                </p>
+
+                <div class="etiquetas-experiencia">
+                    <span>Fotografía</span>
+                    <span>Contenido digital</span>
+                    <span>Edición</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- EXPERIENCIA 04 -->
+
+        <article class="tarjeta-experiencia">
+
+            <div class="numero-experiencia">
+                04
+            </div>
+
+            <div class="contenido-experiencia">
+
+                <span class="etiqueta-sub">
+                    Proyectos personales y académicos
+                </span>
+
+                <h2>
+                    Explorando
+                    <span class="destacado">lo creativo.</span>
+                </h2>
+
+                <p>
+                    Proyectos realizados a lo largo de mi formación,
+                    enfocados en fotografía, diseño gráfico, identidad
+                    visual y comunicación.
+                </p>
+
+                <div class="etiquetas-experiencia">
+                    <span>Fotografía</span>
+                    <span>Diseño</span>
+                    <span>Identidad visual</span>
+                    <span>Dirección creativa</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>
+        &copy; 2026 - Portafolio Digital de Fotografía & Diseño 2026.
+        Todos los derechos reservados
+    </p>
+</footer>
+
+
+<script>
+
+    let ultimoScroll = 0;
+    const barra = document.getElementById('barra-navegación');
+
+    window.addEventListener('scroll', () => {
+
+        const scrollActual = window.scrollY;
+
+        if (scrollActual > ultimoScroll && scrollActual > 100) {
+            barra.classList.add('oculta');
+        } else {
+            barra.classList.remove('oculta');
+        }
+
+        ultimoScroll = scrollActual;
+
+    });
+
+</script>
+
+</body>
+</html>

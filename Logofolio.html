@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital | MI P.O.V</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+<header id="barra-navegación">
+    <div class="logo">
+        <a href="Index.html">Mi galería<span> | Un poco de lo que ven mis ojos.</span></a>
+    </div>
+    <nav class="menu">
+        <a href="Index.html" class="btn-menu">Inicio</a>
+        <a href="Galeria.html" class="btn-menu activo">Galería</a>
+        <a href="Experiencia.html" class="btn-menu">Experiencia</a>
+        <a href="Contacto.html" class="btn-menu">Contacto</a>
+    </nav>
+</header>
+
+<main class="hero-principal">
+    <div class="hero-contenido">
+        <a href="Galeria.html" class="btn-secundario">&#8592; Volver a Galería</a>
+        <h1 style="margin-top: 1.5rem;">MI P.O.V</h1>
+    </div>
+</main>
+
+<section class="seccion-galeria">
+
+    <div class="proyecto-fotos">
+        <h3>Nombre del proyecto</h3>
+        <div class="wrapper-carrusel">
+            <button class="flecha flecha-izq" onclick="moverFotos(-1, 'carrusel-pov-1')">&#10094;</button>
+
+            <div class="carrusel-fotos" id="carrusel-pov-1">
+                <div class="foto-item">
+                    <img src="reemplaza-esta-foto.jpeg" alt="Nombre del proyecto 1">
+                </div>
+            </div>
+
+            <button class="flecha flecha-der" onclick="moverFotos(1, 'carrusel-pov-1')">&#10095;</button>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 - Portafolio Digital de Fotografía & Diseño 2026. Todos los derechos reservados</p>
+</footer>
+
+<script>
+    let ultimoScroll = 0;
+    const barra = document.getElementById('barra-navegación');
+
+    window.addEventListener('scroll', () => {
+        const scrollActual = window.scrollY;
+        if (scrollActual > ultimoScroll && scrollActual > 100) {
+            barra.classList.add('oculta');
+        } else {
+            barra.classList.remove('oculta');
+        }
+        ultimoScroll = scrollActual;
+    });
+
+    function moverFotos(direccion, idCarrusel) {
+        const carrusel = document.getElementById(idCarrusel);
+        const anchoFoto = 340 + 24;
+        carrusel.scrollBy({ left: direccion * anchoFoto, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

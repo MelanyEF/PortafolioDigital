@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital | Inicio </title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body class="pagina-index">
+<header id="barra-navegación">
+    <div class="logo">
+        <a href="Index.html">Mi portafolio<span> | Melany Espinoza Freitas</span></a>
+    </div>
+    <nav class="menu">
+
+        <a href="Index.html" class="btn-menu activo">Inicio</a>
+        <a href="Galeria.html" class="btn-menu">Galería</a>
+        <a href="Experiencia.html" class="btn-menu">Experiencia</a>
+        <a href="Contacto.html" class="btn-menu">Contacto</a>
+    </nav>
+</header>
+
+<main class="hero-principal">
+    <div class="hero-contenido">
+        <span class="etiqueta-sub">Diseño & Fotografía</span>
+        <h1>Te comparto lo que hago, porque hacerlo es expresar mi<span class="destacado">
+            sentir&nbsp;&&nbsp;pensar</span></h1>
+        <p>Soy una fotógrafa con interés en la fotografía de producto, editorial y familiar. Me encanta proyectar emociones genuinas en cada proyecto.</p>
+    <div class="botones-accion">
+        <a href="Galeria.html" class="btn-primario">Ver Proyectos</a>
+        <a href="Contacto.html" class="btn-secundario">Contáctame</a>
+    </div>
+ </div>
+</main>
+ <section class="seccion-destacados">
+                <h2>Una pequeña Introducción</h2>
+            </section>
+<section class="seccion-sobremi" id="sobre-mi">
+    <div class="tarjeta-perfil">
+        <div class="foto-perfil">
+            <img src="tu-foto.jpeg" alt="Melany Espinoza Freitas">
+        </div>
+        <div class="info-perfil">
+            <span class="etiqueta-sub">Sobre mí</span>
+            <h2>Melany Espinoza Freitas</h2>
+            <p>
+                Soy una estudiante de la Licenciatura de Diseño Gráfico, con interés en la fotografía de producto, editorial y familiar.
+                Me encanta proyectar emociones genuinas en cada proyecto, ya sea una sesión planeada
+                o un momento espontáneo que decidí capturar con mi cámara.
+            </p>
+            <p>
+                Actualmente hago mi servicio social en Rectoría, apoyando en proyectos de comunicación
+                visual, diseño gráfico y contenido para redes sociales, gracias a eso, puedo decir que tengo sólo un poco de experiencia frente a cámaras.
+                 Fuera de eso, siempre ando buscando la próxima foto: un café bonito, un atardecer, un perrito que se deja retratar.
+            </p>
+            <div class="etiquetas-experiencia">
+                <span>Fotografía</span>
+                <span>Diseño gráfico</span>
+                <span>Editorial & Producto</span>
+                <span>Retrato</span>
+                <span>Identidad visual</span>
+                <span>Redes sociales</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="seccion-destacados">
+    <h2>Una pequeña Introducción</h2>
+    <div class="grid-especialidades">
+
+        <div class="tarjeta-especialidad">
+            <div class="contenedor-imagen">
+                <img src="Chiva como la hormiga.jpeg" alt="Fotografía de Paisaje y Natualeza">
+            </div>
+            <div class="contenido-tarjeta">
+                <h3>Bearizona</h3>
+                <p>Fue un viaje a Bearizona ubicado en uhn pueblito de Flagstaff llamado Williams, me encantó.</p>
+            </div>
+        </div>
+        <div class="tarjeta-especialidad">
+            <div class="contenedor-imagen">
+                <img src="Kyra.jpeg" alt="Chapucero Café">
+            </div>
+            <div class="contenido-tarjeta">
+                <h3>Chapucero Café</h3>
+                <p>Fue un proyecto muy divertido e interesante, los dueños confiaron en mí y en mis amigas, y todos quedamos felices y contentos.</p>
+            </div>
+        </div>
+
+        <div class="tarjeta-especialidad">
+            <div class="contenedor-imagen">
+                <img src="naaattt.jpeg" alt="Palomina Café">
+            </div>
+            <div class="contenido-tarjeta">
+                <h3>Palomina Café</h3>
+                <p>Fueron fotos tomadas por diversión, pero me encantó el resultado, muy bonitas y reales.</p>
+            </div>
+        </div>
+        <div class="tarjeta-especialidad">
+            <div class="contenedor-imagen">
+                <img src="Mamanina.jpeg" alt="Mi buelita">
+            </div>
+            <div class="contenido-tarjeta">
+                <h3>Un día tranquilo</h3>
+                <p>Una salida familiar, que se convirtió en una sesión para mi abuela.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 - Portafolio Digital de Fotografía & Diseño 2026. Todos los derechos reservados</p>
+</footer>
+<script>
+    let ultimoScroll = 0;
+    const barra = document.getElementById('barra-navegación');
+
+    window.addEventListener('scroll', () => {
+        const scrollActual = window.scrollY;
+
+        if (scrollActual > ultimoScroll && scrollActual > 100) {
+            barra.classList.add('oculta');
+        } else {
+            barra.classList.remove('oculta');
+        }
+
+        ultimoScroll = scrollActual;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital | Retrato</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+<header id="barra-navegación">
+    <div class="logo">
+        <a href="Index.html">Mi galería<span> | Un poco de lo que ven mis ojos.</span></a>
+    </div>
+    <nav class="menu">
+        <a href="Index.html" class="btn-menu">Inicio</a>
+        <a href="Galeria.html" class="btn-menu activo">Galería</a>
+        <a href="Experiencia.html" class="btn-menu">Experiencia</a>
+        <a href="Contacto.html" class="btn-menu">Contacto</a>
+    </nav>
+</header>
+
+<main class="hero-principal">
+    <div class="hero-contenido">
+        <a href="Galeria.html" class="btn-secundario">&#8592; Volver a Galería</a>
+        <h1 style="margin-top: 1.5rem;">Retrato</h1>
+        <p>Esta sección es para mostrar fotos espontáneas, de salidas con amistades o vacaciones en familia porque cada oportunidad es buena para practicar.
+            ¡Recuerda pasar el cursor sobre las fotos para apreciarlas mejor! </p>
+    </div>
+</main>
+
+<section class="seccion-galeria">
+
+    <div class="proyecto-fotos">
+        <h3>Mis amistades</h3>
+        <div class="wrapper-carrusel">
+            <button class="flecha flecha-izq" onclick="moverFotos(-1, 'carrusel-kyra-natalia')">&#10094;</button>
+
+            <div class="carrusel-fotos" id="carrusel-kyra-natalia">
+                <div class="foto-item">
+                    <img src="Mari x2.jpeg" alt="Kyra & Natalia 1" loading="lazy">
+                </div>
+                <div class="foto-item">
+                    <img src="Mari.jpeg" alt="Kyra & Natalia 1" loading="lazy">
+                </div>
+                <div class="foto-item">
+                    <img src="Mari x3.jpeg" alt="Kyra & Natalia 1" loading="lazy">
+                </div>
+                <div class="foto-item">
+                    <img src="K.jpeg" alt="Kyra & Natalia 1" loading="lazy">
+                </div>
+                <div class="foto-item">
+                    <img src="N.jpeg" alt="Kyra & Natalia 1" loading="lazy">
+                </div>
+                <div class="foto-item">
+                    <img src="KN.jpeg" alt="Kyra & Natalia 1" loading="lazy">
+                </div>
+
+            </div>
+
+            <button class="flecha flecha-der" onclick="moverFotos(1, 'carrusel-kyra-natalia')">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="proyecto-fotos">
+        <h3>Un día tranquilo</h3>
+        <div class="wrapper-carrusel">
+            <button class="flecha flecha-izq" onclick="moverFotos(-1, 'carrusel-dia-tranquilo')">&#10094;</button>
+
+            <div class="carrusel-fotos" id="carrusel-dia-tranquilo">
+                <div class="foto-item">
+                    <img src="Mamanina.jpeg" alt="Un día tranquilo 1" loading="lazy">
+                </div>
+            </div>
+
+            <button class="flecha flecha-der" onclick="moverFotos(1, 'carrusel-dia-tranquilo')">&#10095;</button>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 - Portafolio Digital de Fotografía & Diseño 2026. Todos los derechos reservados</p>
+</footer>
+
+<script>
+    let ultimoScroll = 0;
+    const barra = document.getElementById('barra-navegación');
+
+    window.addEventListener('scroll', () => {
+        const scrollActual = window.scrollY;
+        if (scrollActual > ultimoScroll && scrollActual > 100) {
+            barra.classList.add('oculta');
+        } else {
+            barra.classList.remove('oculta');
+        }
+        ultimoScroll = scrollActual;
+    });
+
+    function moverFotos(direccion, idCarrusel) {
+        const carrusel = document.getElementById(idCarrusel);
+        const anchoFoto = 340 + 24;
+        carrusel.scrollBy({ left: direccion * anchoFoto, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital | Galería</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+<header id="barra-navegación">
+    <div class="logo">
+        <a href="Index.html">Mi galería<span> | Un poco de lo que ven mis ojos.</span></a>
+    </div>
+    <nav class="menu">
+        <a href="Index.html" class="btn-menu">Inicio</a>
+        <a href="Galeria.html" class="btn-menu activo">Galería</a>
+        <a href="Experiencia.html" class="btn-menu">Experiencia</a>
+        <a href="Contacto.html" class="btn-menu">Contacto</a>
+    </nav>
+</header>
+
+<main class="hero-principal">
+    <div class="hero-contenido">
+        <span class="etiqueta-sub">Explora</span>
+        <h1>Un poco de lo que <span class="destacado">ven mis ojos</span></h1>
+        <p>Selecciona la categoría que más te guste y ve las fotos.</p>
+    </div>
+</main>
+
+<section class="seccion-carrusel">
+    <h2>Categorías</h2>
+    <div class="wrapper-carrusel">
+        <button class="flecha flecha-izq" onclick="moverCarrusel(-1)">&#10094;</button>
+
+        <div class="carrusel-categorias" id="carrusel">
+
+            <a href="Logofolio.html" class="tarjeta-categoria">
+                <img src="Logofolio.html" alt="Logofolio">
+                <h3>Logofolio</h3>
+            </a>
+
+            <a href="Flora.html" class="tarjeta-categoria">
+                <img src="flora-portada.jpeg" alt="Fotografía de Flora">
+                <h3>Flora</h3>
+            </a>
+
+            <a href="Fauna.html" class="tarjeta-categoria">
+                <img src="zorro no te lo lleves.jpeg" alt="Fotografía de Fauna">
+                <h3>Fauna</h3>
+            </a>
+
+            <a href="Paisaje.html" class="tarjeta-categoria">
+                <img src="paisaje-portada.jpeg" alt="Fotografía de Paisaje">
+                <h3>Paisaje</h3>
+            </a>
+
+            <a href="Retrato.html" class="tarjeta-categoria">
+                <img src="Mari x2.jpeg" alt="Fotografía de Retrato">
+                <h3>Retrato</h3>
+            </a>
+
+             <a href="EditorialProducto.html" class="tarjeta-categoria">
+                <img src="Kyra x2.jpeg" alt="Editorial & Producto">
+                <h3>Editorial & Producto</h3>
+            </a>
+
+             <a href="MiPOV.html" class="tarjeta-categoria">
+                <img src="retrato-portada.jpeg" alt="Fotografía Libre (P.O.V)">
+                <h3>MI P.O.V</h3>
+            </a>
+
+        </div>
+
+        <button class="flecha flecha-der" onclick="moverCarrusel(1)">&#10095;</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 - Portafolio Digital de Fotografía & Diseño 2026. Todos los derechos reservados</p>
+</footer>
+
+<script>
+    let ultimoScroll = 0;
+    const barra = document.getElementById('barra-navegación');
+
+    window.addEventListener('scroll', () => {
+        const scrollActual = window.scrollY;
+        if (scrollActual > ultimoScroll && scrollActual > 100) {
+            barra.classList.add('oculta');
+        } else {
+            barra.classList.remove('oculta');
+        }
+        ultimoScroll = scrollActual;
+    });
+
+    function moverCarrusel(direccion) {
+        const carrusel = document.getElementById('carrusel');
+        const anchoTarjeta = 220 + 24;
+        carrusel.scrollBy({ left: direccion * anchoTarjeta, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

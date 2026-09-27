@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital | Editorial & Producto</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+<header id="barra-navegación">
+    <div class="logo">
+        <a href="Index.html">Mi galería<span> | Un poco de lo que ven mis ojos.</span></a>
+    </div>
+    <nav class="menu">
+        <a href="Index.html" class="btn-menu">Inicio</a>
+        <a href="Galeria.html" class="btn-menu activo">Galería</a>
+        <a href="Experiencia.html" class="btn-menu">Experiencia</a>
+        <a href="Contacto.html" class="btn-menu">Contacto</a>
+    </nav>
+</header>
+
+<main class="hero-principal">
+    <div class="hero-contenido">
+        <a href="Galeria.html" class="btn-secundario">&#8592; Volver a Galería</a>
+        <h1 style="margin-top: 1.5rem;">Editorial & Producto</h1>
+        <p>Pequeños proyectos y trabajitos con lugares que me gusta mucho visitar.
+            ¡Recuerda poner el cursor sobre las fotos para apreciarlas mejor!</p>
+    </div>
+</main>
+
+<section class="seccion-galeria">
+
+    <div class="proyecto-fotos">
+        <h3>Chapucero Café</h3>
+        <p>Mis amigas y yo fuimos solicitadas para tomar ciertas fotografías para el café y otras fueron tomadas como recuerdo personal, pero al verlas les gustaron tanto que me pidieron permiso para usarlas en sus redes. Fue la primera vez que trabajé para alguien más.</p>
+        <div class="wrapper-carrusel">
+            <button class="flecha flecha-izq" onclick="moverFotos(-1, 'carrusel-chapucero')">&#10094;</button>
+
+            <div class="carrusel-fotos" id="carrusel-chapucero">
+                <div class="foto-item">
+                    <img src="BAGLES.jpeg" alt="Bagels">
+                </div>
+                <div class="foto-item">
+                    <img src="FLAN.jpeg" alt="Flan">
+                </div>
+                <div class="foto-item">
+                    <img src="TRES CAFÉS.jpeg" alt="Tres cafés">
+                </div>
+                <div class="foto-item">
+                    <img src="GALLETAS MESA AMDERA.jpeg" alt="Galletas mesa madera">
+                </div>
+                <div class="foto-item">
+                    <img src="JUEGO DE MESA NAT.jpeg" alt="Juego de mesa">
+                </div>
+                <div class="foto-item">
+                    <img src="CAFÉS PUERTA AZUL.jpeg" alt="Cafés puerta azul">
+                </div>
+                <div class="foto-item">
+                    <img src="UVOLA.jpeg" alt="Cafés puerta azul">
+                </div>
+                <div class="foto-item">
+                    <img src="Yoi.jpeg" alt="Cafés puerta azul">
+                </div>
+                  <div class="foto-item">
+                    <img src="Galleta maria esq no me acuerdo.jpeg" alt="Cafés puerta azul">
+                </div>
+                  <div class="foto-item">
+                    <img src="pastelito.jpeg" alt="Cafés puerta azul">
+                </div>
+                  <div class="foto-item">
+                    <img src="Mano super aesthetic.jpeg" alt="Cafés puerta azul">
+                </div>
+                  <div class="foto-item">
+                    <img src="IMG_0986.JPG.jpeg" alt="Cafés puerta azul">
+                </div>
+                  <div class="foto-item">
+                    <img src="Encabrewnada creo.jpeg" alt="Cafés puerta azul">
+                </div>
+                  <div class="foto-item">
+                    <img src="Kyra x2.jpeg" alt="Cafés puerta azul">
+                </div>
+                  <div class="foto-item">
+                    <img src="Kyra.jpeg" alt="Cafés puerta azul">
+                </div>
+                
+            </div>
+
+            <button class="flecha flecha-der" onclick="moverFotos(1, 'carrusel-chapucero')">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="proyecto-fotos">
+        <h3>Palomina Café</h3>
+        <p>Fuimos a desayunar, pero yo siempre cargo mi cámara a cualquier lugar, subí las fotos que tomé y el café me contactó para usarlas en sus redes!</p>
+        <div class="wrapper-carrusel">
+            <button class="flecha flecha-izq" onclick="moverFotos(-1, 'carrusel-palomina')">&#10094;</button>
+
+            <div class="carrusel-fotos" id="carrusel-palomina">
+                <div class="foto-item">
+                    <img src="Mascota Palomina.jpeg" alt="Palomina 1">
+                </div>
+                <div class="foto-item">
+                    <img src="Sandwich Palomina.jpeg" alt="Palomina 2">
+                </div>
+                 <div class="foto-item">
+                    <img src="Brownie Palomina.jpeg" alt="Palomina 3">
+                </div>
+                 <div class="foto-item">
+                    <img src="Nat en Palomina.jpeg" alt="Palomina 4">
+                </div>
+                <div class="foto-item">
+                    <img src="Comida Palomina.jpeg" alt="Palomina 5">
+                </div>
+            </div>
+
+            <button class="flecha flecha-der" onclick="moverFotos(1, 'carrusel-palomina')">&#10095;</button>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 - Portafolio Digital de Fotografía & Diseño 2026. Todos los derechos reservados</p>
+</footer>
+
+<script>
+    let ultimoScroll = 0;
+    const barra = document.getElementById('barra-navegación');
+
+    window.addEventListener('scroll', () => {
+        const scrollActual = window.scrollY;
+        if (scrollActual > ultimoScroll && scrollActual > 100) {
+            barra.classList.add('oculta');
+        } else {
+            barra.classList.remove('oculta');
+        }
+        ultimoScroll = scrollActual;
+    });
+
+    function moverFotos(direccion, idCarrusel) {
+        const carrusel = document.getElementById(idCarrusel);
+        const anchoFoto = 340 + 24;
+        carrusel.scrollBy({ left: direccion * anchoFoto, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

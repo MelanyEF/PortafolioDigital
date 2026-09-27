@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital | Fauna</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+<header id="barra-navegación">
+    <div class="logo">
+        <a href="Index.html">Mi galería<span> | Un poco de lo que ven mis ojos.</span></a>
+    </div>
+    <nav class="menu">
+        <a href="Index.html" class="btn-menu">Inicio</a>
+        <a href="Galeria.html" class="btn-menu activo">Galería</a>
+        <a href="Experiencia.html" class="btn-menu">Experiencia</a>
+        <a href="Contacto.html" class="btn-menu">Contacto</a>
+    </nav>
+</header>
+
+<main class="hero-principal">
+    <div class="hero-contenido">
+        <a href="Galeria.html" class="btn-secundario">&#8592; Volver a Galería</a>
+        <h1 style="margin-top: 1.5rem;">Fauna</h1>
+        <p>Aquí va tu descripción de qué trata esta categoría en general.</p>
+    </div>
+</main>
+
+<section class="seccion-galeria">
+
+    <div class="proyecto-fotos">
+        <h3>Bearizona</h3>
+        <p>Aquí va tu descripción de este proyecto en particular.</p>
+        <div class="wrapper-carrusel">
+            <button class="flecha flecha-izq" onclick="moverFotos(-1, 'carrusel-bearizona')">&#10094;</button>
+
+            <div class="carrusel-fotos" id="carrusel-bearizona">
+                <div class="foto-item">
+                    <img src="zorro no te lo lleves.jpeg" alt="Bearizona 1">
+                </div>
+                <div class="foto-item">
+                    <img src="Chiva como la hormiga.jpeg" alt="Bearizona 2">
+                </div>
+            </div>
+
+            <button class="flecha flecha-der" onclick="moverFotos(1, 'carrusel-bearizona')">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="proyecto-fotos">
+        <h3>Patitos de La Sauceda</h3>
+        <p>Un día que fui a visitar La Sauceda por primera vez en toda mi vida, y se me cruzaron los patitos tna lindos que habitan ahí.</p>
+        <div class="wrapper-carrusel">
+            <button class="flecha flecha-izq" onclick="moverFotos(-1, 'carrusel-sauceda')">&#10094;</button>
+
+            <div class="carrusel-fotos" id="carrusel-sauceda">
+                <div class="foto-item">
+                    <img src="pato sauceda uno.jpeg" alt="la sauceda 1">
+                </div>
+                <div class="foto-item">
+                    <img src="Chiva como la hormiga.jpeg" alt="la sauceda 2">
+                </div>
+            </div>
+
+            <button class="flecha flecha-der" onclick="moverFotos(1, 'carrusel-sauceda')">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="proyecto-fotos">
+        <h3>Perritos</h3>
+        <p>Soy una fanática de los perritos, cada que veo uno, amérita una foto y muchos de ellos cooperan un chorro!!</p>
+        <div class="wrapper-carrusel">
+            <button class="flecha flecha-izq" onclick="moverFotos(-1, 'carrusel-perritos')">&#10094;</button>
+
+            <div class="carrusel-fotos" id="carrusel-perritos">
+                <div class="foto-item">
+                    <img src="perro cancha.jpeg" alt="Perritos-1">
+                </div>
+                <div class="foto-item">
+                    <img src="perro palomina.jpeg" alt="Perritos-2">
+                </div>
+                 <div class="foto-item">
+                    <img src="perro palomita.jpeg" alt="Perritos-3">
+                </div>
+            </div>
+
+            <button class="flecha flecha-der" onclick="moverFotos(1, 'carrusel-perritos')">&#10095;</button>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 - Portafolio Digital de Fotografía & Diseño 2026. Todos los derechos reservados</p>
+</footer>
+
+<script>
+    let ultimoScroll = 0;
+    const barra = document.getElementById('barra-navegación');
+
+    window.addEventListener('scroll', () => {
+        const scrollActual = window.scrollY;
+        if (scrollActual > ultimoScroll && scrollActual > 100) {
+            barra.classList.add('oculta');
+        } else {
+            barra.classList.remove('oculta');
+        }
+        ultimoScroll = scrollActual;
+    });
+
+    function moverFotos(direccion, idCarrusel) {
+        const carrusel = document.getElementById(idCarrusel);
+        const anchoFoto = 340 + 24;
+        carrusel.scrollBy({ left: direccion * anchoFoto, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>>

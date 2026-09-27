@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital | Contacto</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+<header id="barra-navegación">
+    <div class="logo">
+        <a href="Index.html">Mis redes<span> | Melany Espinoza Freitas</span></a>
+    </div>
+    <nav class="menu">
+
+        <a href="Index.html" class="btn-menu">Inicio</a>
+        <a href="Galeria.html" class="btn-menu">Galería</a>
+        <a href="Experiencia.html" class="btn-menu">Experiencia</a>
+        <a href="Contacto.html" class="btn-menu activo">Contacto</a>
+    </nav>
+</header>
+
+<main class="hero-principal">
+    <div class="hero-contenido sin-animacion">
+        <span class="etiqueta-sub">¡Háblame!</span>
+        <h1>¿Tienes un proyecto en mente? <span class="destacado"> ¡Cuéntamelo!</span></h1>
+        <p>Ya sea una sesión de fotos, un proyecto de diseño o solo para saludar, este es el lugar.</p>
+    </div>
+</main>
+
+
+        <section class="seccion-contacto">
+            <div class="tarjeta-contacto">
+                <div class="contenido-tarjeta">
+                    <h3>¡Formas de contactarme!</h3>
+                    <div class="lista-contacto">
+                        <a class="enlace-contacto" href="mailto:melanyespinozazafreitas@gmail.com?subject=Consulta%20desde%20tu%20portafolio&body=Hola%20Melany%2C%0D%0A%0D%0AMe%20gustar%C3%ADa%20platicar%20sobre...">
+                            <span class="icono-contacto" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>
+                            </span>
+                            <span>melanyespinozazafreitas@gmail.com</span>
+                        </a>
+                        <a class="enlace-contacto" href="https://instagram.com/memmi.rawfx" target="_blank" rel="noopener">
+                            <span class="icono-contacto" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                            </span>
+                            <span>@memmi.rawfx</span>
+                        </a>
+                        <a class="enlace-contacto" href="https://www.tiktok.com/@memmini" target="_blank" rel="noopener">
+                            <span class="icono-contacto" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M16.5 3c.4 2.1 1.9 3.6 4 4v3c-1.4 0-2.8-.4-4-1.2v6.7A5.5 5.5 0 1 1 11 10v3.2a2.3 2.3 0 1 0 2.5 2.3V3h3Z"/></svg>
+                            </span>
+                            <span>@memmini</span>
+                        </a>
+                        <a class="enlace-contacto" href="https://wa.me/526624103268" target="_blank" rel="noopener">
+                            <span class="icono-contacto" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+                            </span>
+                            <span>+ 52 662 410 3268</span>
+                        </a>
+                        <div class="enlace-contacto sin-hover">
+                            <span class="icono-contacto" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.58 7-12A7 7 0 0 0 5 10c0 4.42 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                            </span>
+                            <span>Hermosillo, Sonora, México</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<footer>
+    <p>&copy; 2026 - Portafolio Digital de Fotografía & Diseño 2026. Todos los derechos reservados</p>
+</footer>
+
+</body>
+<script>
+    let ultimoScroll = 0;
+    const barra = document.getElementById('barra-navegación');
+
+    window.addEventListener('scroll', () => {
+        const scrollActual = window.scrollY;
+
+        if (scrollActual > ultimoScroll && scrollActual > 100) {
+            barra.classList.add('oculta');
+        } else {
+            barra.classList.remove('oculta');
+        }
+
+        ultimoScroll = scrollActual;
+    });
+</script>
+
+</body>
+</html>
